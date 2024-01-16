@@ -1,0 +1,135 @@
+
+.headerWrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d4b87e;
+    @media (min-width: $tabletWidth) {
+        display: flex;
+    }
+
+}
+.headerLeft{
+    padding-bottom: 10px;
+}
+.logoImg{
+    width: 80px;
+}
+.headerNav{
+    display: none;
+    @media (min-width: $tabletWidth) {
+        display: flex;
+    }
+}
+.headerRightMobile{
+    display: flex;
+    gap: 40px;
+    padding: 0 80px;
+    @media (min-width: $tabletWidth) {
+        display: none;
+    }
+}
+.headerRight{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    @media (min-width: $tabletWidth) {
+        display: flex;
+    }
+}
+.headerSvg{
+    width: 30px;
+}
+.headerNavList{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 35px;
+}
+.headerLink{
+    font-size: 20px;
+    font-family: monospace;
+}
+.headerBtn{
+    padding: 5px 16px;
+    background-color: darkgrey;
+    border: none;
+}
+.headerRightBottom{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* off-screen-menu */
+.off-screen-menu {
+    padding: 30px 0;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: -450px;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    .off-screen-menu__link{
+        color: #d4b87e;
+    }
+}
+.off-screen-menu.active {
+    right: 0;
+}
+/* ham menu */
+.ham-menu {
+    position: absolute;
+    right: 10px;
+    top: 26px;
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+}
+.ham-menu span {
+    z-index: 3;
+    height: 3px;
+    width: 100%;
+    background-color: #d4b87e;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active{
+    position: fixed;
+    z-index: 10;
+    right: 10px;
+    top: 26px;
+}
+.ham-menu.active span {
+    background-color: #d4b87e;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

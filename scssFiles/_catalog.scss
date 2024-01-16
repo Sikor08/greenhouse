@@ -1,0 +1,56 @@
+.catalog{
+    padding: 20px 0 0 0;
+    display: flex;
+    &__heading{
+        margin: auto;
+    }
+    &__list{
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+}
+    
+.catalogWrap{
+    display: flex;
+    flex-direction: column;
+}
+.catalogItem{
+    position: relative;
+    &__img{
+        width: 100%;
+    }
+    &__title{
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        color: #d4b87e;
+        font-size: 15px;
+    }
+}
+.good{
+    &__img{
+        width: 100%;
+    }
+    &__text{
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+    }
+}
+.options{
+    padding: 15px 0;
+    border-bottom: 1px solid #d4b87e;
+}
+table {
+    width: 100%;
+    border-collapse:collapse;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+td{
+    justify-content: center;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
