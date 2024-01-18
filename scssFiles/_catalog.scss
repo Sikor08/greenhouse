@@ -8,6 +8,10 @@
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            @media (min-width: $tabletWidth) {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+
         gap: 10px;
     }
 }
@@ -15,11 +19,16 @@
 .catalogWrap{
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid#d4b87e;
 }
 .catalogItem{
     position: relative;
     &__img{
         width: 100%;
+        min-height: 174px;
+        @media (min-width: $tabletWidth) {
+            min-height: 295px;
+        }
     }
     &__title{
         position: absolute;
@@ -36,6 +45,12 @@
     &__text{
         font-family: 'Times New Roman', Times, serif;
         color: black;
+        // @media (min-width: $tabletWidth) {
+        //     position: absolute;
+        //     top: 22px;
+        //     right: 20px;
+        //     max-width: 53%;
+        // }
     }
 }
 .options{
